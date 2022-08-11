@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+
+    <EditText
+        android:id="@+id/etnombres"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/disenoinputlogin"
+        android:drawableStart="@drawable/ic_user"
+        android:drawablePadding="20dp"
+        android:hint="Nombres"
+        android:inputType="textNoSuggestions"
+        android:paddingLeft="20dp"
+        android:textColor="#1B1B1B"
+        android:textColorHighlight="#4CAF50"
+        android:textColorHint="#7A7A7A"
+        android:textColorLink="#18F121"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textingresa">
+
+    </EditText>
+
+    <EditText
+        android:id="@+id/etapellidos"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/disenoinputlogin"
+        android:drawableStart="@drawable/ic_id_badge"
+        android:drawablePadding="20dp"
+        android:hint="Apellidos"
+        android:inputType="textPersonName"
+        android:paddingLeft="17dp"
+        android:textColor="#1B1B1B"
+        android:textColorHighlight="#4CAF50"
+        android:textColorHint="#7A7A7A"
+        android:textColorLink="#18F121"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etnombres" />
+
+    <EditText
+        android:id="@+id/etnumero_telefono"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/disenoinputlogin"
+        android:drawableStart="@drawable/ic_phone_call"
+        android:drawablePadding="20dp"
+        android:hint="Celular"
+        android:inputType="number"
+        android:paddingLeft="20dp"
+        android:textColor="#1B1B1B"
+        android:textColorHighlight="#4CAF50"
+        android:textColorHint="#7A7A7A"
+        android:textColorLink="#18F121"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etapellidos" />
+
+    <EditText
+        android:id="@+id/etcontraseña"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/disenoinputlogin"
+        android:drawableStart="@drawable/ic_lock"
+        android:drawablePadding="20dp"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        android:paddingStart="20dp"
+        android:textColor="#1B1B1B"
+        android:textColorHighlight="#4CAF50"
+        android:textColorHint="#7A7A7A"
+        android:textColorLink="#18F121"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etnumero_telefono" />
+
+    <EditText
+        android:id="@+id/Confirmar_contraseña"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/disenoinputlogin"
+        android:drawableStart="@drawable/ic_shield_check"
+        android:drawablePadding="20dp"
+        android:hint="Confirmar Contraseña"
+        android:inputType="textPassword"
+        android:paddingStart="20dp"
+        android:textColor="#1B1B1B"
+        android:textColorHighlight="#4CAF50"
+        android:textColorHint="#7A7A7A"
+        android:textColorLink="#18F121"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etcontraseña" />
+
+    <Button
+        android:id="@+id/btnRegistrar"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/disenobotonlogin"
+        android:gravity="center"
+        android:text="Registrarme"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Confirmar_contraseña" />
+
+    <TextView
+        android:id="@+id/textingresa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="156dp"
+        android:text="llena los campos para continuar"
+        android:textColor="#393939"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.447"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".registrar">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="340dp"
+        android:layout_height="592dp"
+        android:background="@drawable/diseno2"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="133dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/login"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/agricultor" />
+
+        <EditText
+            android:id="@+id/correo"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/diseno"
+            android:ems="10"
+            android:hint=" Nombres"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.512"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="196dp" />
+
+        <EditText
+            android:id="@+id/etapellidos"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/diseno"
+            android:ems="10"
+            android:hint=" Apellidos"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.512"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="244dp" />
+
+        <EditText
+            android:id="@+id/numero_celular"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/diseno"
+            android:ems="10"
+            android:hint=" Numero Celular"
+            android:inputType="phone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.512"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.576" />
+
+        <EditText
+            android:id="@+id/etcontraseña"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/diseno"
+            android:ems="10"
+            android:hint=" Contraseña"
+            android:inputType="textPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.589"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="344dp" />
+
+        <EditText
+            android:id="@+id/confirmarcontrasena"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/diseno"
+            android:ems="10"
+            android:hint=" Confirmar Contraseña"
+            android:inputType="textPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.512"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="395dp" />
+
+        <Button
+            android:id="@+id/iniciarSesionBtn"
+            android:layout_width="262dp"
+            android:layout_height="42dp"
+            android:background="@drawable/diseno"
+            android:text="@string/btn_registrarse_sesion"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="463dp" />
+
+        <TextView
+            android:layout_width="244dp"
+            android:layout_height="46dp"
+            android:layout_marginEnd="16dp"
+            android:text=" ¿Ya tienes cuenta?"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:layout_editor_absoluteY="516dp" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/iniciar_sesion"
+            tools:layout_editor_absoluteX="170dp"
+            tools:layout_editor_absoluteY="516dp" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout >
+
+</androidx.constraintlayout.widget.ConstraintLayout>

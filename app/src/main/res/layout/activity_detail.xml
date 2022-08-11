@@ -1,0 +1,303 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".DetailActivity">
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="44dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:background="#00FFFFFF"
+        android:onClick="volver"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_arrow_left" />
+
+
+
+
+
+
+
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="match_parent"
+        android:layout_height="645dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="match_parent"
+                android:layout_height="260dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                app:cardCornerRadius="10dp">
+
+                <HorizontalScrollView
+                    android:id="@+id/horizontalScrollView"
+                    android:layout_width="match_parent"
+                    android:layout_height="260dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/imageItemDetail"
+                            android:layout_width="390dp"
+                            android:scaleType="centerCrop"
+                            android:layout_height="match_parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+                    </LinearLayout>
+
+
+                </HorizontalScrollView>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:id="@+id/tvNombreDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginBottom="40dp"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <TextView
+                android:id="@+id/Precio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:fontFamily="sans-serif"
+                android:text="Precio"
+                android:textColor="#404040"
+                android:textSize="22sp"
+                tools:ignore="DuplicateIds" />
+
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="220dp"
+                android:text="$"
+                android:textColor="#26A62B"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/tvPrecioDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="240dp"
+                android:layout_marginTop="-30dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginBottom="30dp"
+                android:fontFamily="sans-serif"
+                android:textColor="#26A62B"
+                android:textSize="24sp" />
+
+
+
+            <TextView
+                android:id="@+id/tvDescripcionDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="88dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="40dp"
+                android:textColor="#606060"
+                android:fontFamily="sans-serif"
+                android:textSize="18sp"
+               />
+
+
+            <TextView
+                android:id="@+id/Infovendedor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="sans-serif"
+                android:text="Informacion vendedor"
+                android:textColor="#050505"
+                android:textSize="24sp"
+                tools:ignore="DuplicateIds" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/ImagenPerfil"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="200dp"
+                app:cardElevation="8dp"
+                tools:cardElevation="10dp">
+
+                <ImageView
+                    android:id="@+id/imageView8"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    app:srcCompat="@drawable/benzema" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/Nombrevendedor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="110dp"
+                android:layout_marginTop="-70dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="sans-serif"
+                android:text="Alejandro Guerrero"
+                android:textColor="#404040"
+                android:textSize="20sp"
+                tools:ignore="DuplicateIds" />
+
+            <Button
+                android:id="@+id/btn_mas"
+                android:layout_width="141dp"
+                android:layout_height="46dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="220dp"
+                android:background="@drawable/disenobotones"
+                android:text="mas..."
+                android:textColor="#FFFFFF" />
+
+
+            <Button
+                android:id="@+id/btn_contactarl"
+                android:layout_width="141dp"
+                android:layout_height="47dp"
+                android:layout_marginLeft="200dp"
+                android:layout_marginTop="-45dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginBottom="40dp"
+                android:background="@drawable/disenobotones"
+                android:text="contactar"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/Comentarios"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:text="Comentarios"
+                android:textColor="#000000"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/CampoComentarios"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="#4CAF50"
+                android:drawableTint="#4CAF50"
+                android:ems="10"
+                android:foregroundTint="#4CAF50"
+                android:inputType="textPersonName"
+                android:text="Escribe un comentario"
+                android:textColor="#8A8A8A"
+                android:textColorHighlight="#25DA2C"
+                android:textColorHint="#FFFFFF"
+                android:textColorLink="#25DA2C"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/btn_contactar"
+                android:layout_width="117dp"
+                android:layout_height="38dp"
+                android:layout_marginLeft="220dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/disenobotones"
+                android:text="enviar"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/textView28"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginBottom="10dp"
+                android:text="Andres Mosquera"
+                android:textColor="#393939"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView29"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="30dp"
+                android:text="me encanto mucho el producto"
+                android:textColor="#707070"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginBottom="10dp"
+                android:text="Hernesto lopez"
+                android:textColor="#393939"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView27"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="40dp"
+                android:text="Muy buen producto , con excelente calida , muy fresco esta bueno"
+                android:textColor="#707070"
+                android:textSize="18sp" />
+
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

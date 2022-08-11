@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#249529"
+    android:textAlignment="center"
+    tools:context=".Sproducto">
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="44dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:background="#00FFFFFF"
+        android:onClick="volver"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_arrow_left" />
+
+    <TextView
+        android:id="@+id/textView102"
+        android:layout_width="180dp"
+        android:layout_height="27dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="volver"
+        android:text="  Subir Producto"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.666" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="Por favor llena los campos , para subir tu producto"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton3" />
+
+    <ScrollView
+        android:id="@+id/scrollView4"
+        android:layout_width="match_parent"
+        android:layout_height="609dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/sproducto"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Nombre"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                tools:ignore="DuplicateIds" />
+
+            <EditText
+                android:id="@+id/etapellidos"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/disenoformproducto"
+                android:backgroundTint="#2DA6A6A6"
+                android:cursorVisible="true"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:paddingStart="10dp"
+                android:singleLine="false"
+                android:textAllCaps="false"
+                android:textColor="#373737"
+                android:textColorHighlight="#FBFBFB"
+                android:textColorHint="#F4F4F4"
+                android:textColorLink="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/textView98"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Precio"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/etprecio"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/disenoformproducto"
+                android:backgroundTint="#2DA6A6A6"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:paddingStart="10dp"
+                android:textColor="#373737"
+                android:textColorHint="#F8F3F3" />
+
+            <TextView
+                android:id="@+id/textView89"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Imagen"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="203dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/disenoformproducto"
+                app:cardBackgroundColor="#2DA6A6A6"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="0dp">
+
+
+                <ImageView
+                    android:id="@+id/etimage"
+                    android:layout_width="match_parent"
+                    android:layout_height="203dp"
+                    android:scaleType="centerCrop" />
+
+
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/btn_cargarfoto"
+                android:layout_width="121dp"
+                android:layout_height="38dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/bordes"
+                android:onClick="cargar"
+                android:text="Cargar foto"
+                android:textAllCaps="false"
+                android:textColor="#000000"
+                app:layout_constraintBottom_toTopOf="@+id/barraBotones"
+                app:layout_constraintStart_toStartOf="parent">
+
+
+            </Button>
+
+            <Button
+                android:id="@+id/btn_contactar5"
+                android:layout_width="121dp"
+                android:layout_height="38dp"
+                android:layout_marginLeft="160dp"
+                android:layout_marginTop="-40dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/bordes"
+                android:onClick="dispatchTakePictureIntent"
+                android:text="tomar foto"
+                android:textAllCaps="false"
+                app:layout_constraintBottom_toTopOf="@+id/barraBotones"
+                app:layout_constraintStart_toStartOf="parent">
+
+
+            </Button>
+
+            <TextView
+                android:id="@+id/Infovendedor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Descripcion"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/etdescripcion"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/disenoformproducto"
+                android:backgroundTint="#2DA6A6A6"
+                android:ems="10"
+                android:gravity="start|top"
+                android:inputType="textMultiLine"
+                android:paddingStart="10dp"
+                android:paddingTop="10dp"
+                android:textColor="#373737"
+                android:textColorHint="#FFFFFF" />
+
+            <Button
+                android:id="@+id/btn_subir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="60dp"
+                android:layout_marginBottom="40dp"
+                android:background="@drawable/bordes"
+                android:backgroundTint="#249529"
+                android:text="Subir"
+                android:textColor="#FFFFFF" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+

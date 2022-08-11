@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/alata</item>
+        <item>@font/alata</item>
+        <item>@font/alfa_slab_one</item>
+        <item>@font/allerta</item>
+        <item>@font/allerta_stencil</item>
+        <item>@font/anton</item>
+        <item>@font/archivo</item>
+        <item>@font/b612_mono_bold</item>
+        <item>@font/carter_one</item>
+    </array>
+</resources>

@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Tierra de grandes</string>
+    <string name="tierradegrandes"></string>
+    <string name="comercio">Comercio Agricola</string>
+    <string name="lema">lo unico imposible es aquello que no intentas</string>
+    <string name="icono_estrella">icono_estrella</string>
+    <string name="Aceptar">aceptar</string>
+    <string name="Cancelar">cancelar</string>
+    <string name="seleccion">switch</string>
+    <string name="off">off</string>
+    <string name="on">on</string>
+    <string name="settings">settings</string>
+
+    <string name="btn_iniciar_sesion">Iniciar Sesion</string>
+    <string name="btn_registrarse_sesion">Registrarse</string>
+    <string name="iniciar_sesion">INICIAR SESION</string>
+    <string name="Actualizar" />
+    <string name="tomar_foto">tomar_foto</string>
+    <string name="title_activity_felipe">felipe</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="descriagregarcuenta">Agrega una nueva Cuenta</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="wellcome_MainAct2" />
+    <string name="registrar">Registrar</string>
+    <string name="title_activity_location">Location</string>
+
+
+</resources>
