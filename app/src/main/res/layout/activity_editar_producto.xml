@@ -4,20 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:orientation="vertical"
-    android:padding="10dp"
     android:gravity="center"
+    android:padding="10dp"
     android:layout_height="match_parent"
-    tools:context=".usuarios.agregar">
+    tools:context=".usuarios.editar">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="ingrese usuarios"
+        android:gravity="center"
         android:textSize="28sp"
         />
 
     <EditText
-        android:id="@+id/nombre_p"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="ID"
+        android:id="@+id/id"
+        android:textSize="20sp"
+        android:enabled="false"
+        />
+
+    <EditText
+        android:id="@+id/nombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -26,59 +36,39 @@
         android:textSize="20sp" />
 
     <EditText
-        android:id="@+id/apellidos"
+        android:id="@+id/precio"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:hint="Apellidos:"
+        android:layout_marginTop="20dp"
+        android:hint="precio:"
         android:inputType="textPersonName"
         android:textSize="20sp" />
 
     <EditText
-        android:id="@+id/nombreusuario"
+        android:id="@+id/informacion_de_produccion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:hint="Nombre Usuario:"
-        android:inputType="textPersonName"
-        android:textSize="20sp" />
-
-    <EditText
-        android:id="@+id/info_p"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:hint="Email:"
+        android:hint="informacion de produccion:"
         android:inputType="textEmailAddress"
         android:textSize="20sp" />
 
     <EditText
-        android:id="@+id/descripcion_p"
+        android:id="@+id/descripcion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:hint="Telefono:"
-        android:inputType="number"
+        android:hint="descripcion:"
+        android:inputType="textPersonName"
         android:textSize="20sp" />
-
-
-    <EditText
-        android:id="@+id/contraseña"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:hint="Contraseña:"
-        android:inputType="textPassword"
-        android:textSize="20sp" />
-
-
 
     <Button
-        android:id="@+id/btnInsert"
+
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:backgroundTint="@color/teal_200"
-        android:text="insertar"
+        android:text="Actualizar"
+        android:onClick="actualizar"
         android:textColor="@android:color/white"
         android:textSize="18sp"
         android:layout_marginTop="20dp"

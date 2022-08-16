@@ -1,15 +1,18 @@
 package com.example.splashscreenapp.usuarios;
 
 public class Usuarios {
-    String id,nombres,apellidos,email,numero_telefono;
+    String id,nombres,apellidos,nombreusuario,email,numero_telefono;
+
+
 
     public Usuarios() {
     }
 
-    public Usuarios(String id, String nombres,String apellidos ,String email, String numero_telefono) {
+    public Usuarios(String id, String nombres,String apellidos ,String nombreusuario ,String email, String numero_telefono) {
         this.id = id;
         this.nombres = nombres;
         this.apellidos = apellidos;
+        this.nombreusuario = nombreusuario;
         this.email = email;
         this.numero_telefono = numero_telefono;
     }
@@ -26,12 +29,20 @@ public class Usuarios {
         return nombres;
     }
 
-    public void setNombres(String nombre) {
+    public void setNombres(String nombres) {
         this.nombres = nombres;
     }
 
     public String getApellidos() {
         return apellidos;
+    }
+
+    public String getNombreusuario() {
+        return nombreusuario;
+    }
+
+    public void setNombreusuario(String nombreusuario) {
+        this.nombreusuario = nombreusuario;
     }
 
     public void setApellidos(String apellidos) {
@@ -47,12 +58,20 @@ public class Usuarios {
     }
 
     public String getNumero_telefono() {
-        return email;
+        return numero_telefono;
     }
 
     public void setNumero_telefono(String numero_telefono) {
         this.numero_telefono = numero_telefono;
     }
+
+    //public int getFecha_actual() {
+      //  return fecha_actual;
+    //}
+
+    //public void setFecha_actual(int fecha_actual) {
+    //this.fecha_actual = fecha_actual;
+    //}
 
 
 }

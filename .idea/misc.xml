@@ -3,10 +3,49 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/SENA/Desktop/App-android/app/src/main/res/layout/activity_anterior2.xml" value="0.3625" />
+        <entry key="..\:/Users/SENA/Desktop/App-android/app/src/main/res/layout/activity_categorias2.xml" value="0.3625" />
+        <entry key="..\:/Users/SENA/Desktop/App-android/app/src/main/res/layout/activity_detalles.xml" value="0.3625" />
+        <entry key="..\:/Users/SENA/Desktop/App-android/app/src/main/res/layout/activity_detalles_producto.xml" value="0.3625" />
+        <entry key="..\:/Users/SENA/Desktop/App-android/app/src/main/res/layout/activity_editar.xml" value="0.3625" />
+        <entry key="..\:/Users/SENA/Desktop/App-android/app/src/main/res/layout/activity_editar_producto.xml" value="0.3625" />
+        <entry key="..\:/Users/SENA/Desktop/App-android/app/src/main/res/layout/activity_ejemplo.xml" value="0.3625" />
+        <entry key="..\:/Users/SENA/Desktop/App-android/app/src/main/res/layout/activity_perfil1.xml" value="0.3625" />
+        <entry key="..\:/Users/SENA/Desktop/App-android/app/src/main/res/layout/app_bar.xml" value="0.3625" />
+        <entry key="..\:/Users/SENA/Desktop/App-android/app/src/main/res/layout/cardview.xml" value="0.3625" />
+        <entry key="..\:/Users/SENA/Desktop/App-android/app/src/main/res/layout/fragment__main.xml" value="0.3625" />
+        <entry key="..\:/Users/SENA/Desktop/App-android/app/src/main/res/layout/fragment_signup_tab.xml" value="0.3625" />
+        <entry key="..\:/Users/SENA/Desktop/App-android/app/src/main/res/layout/header_navigation.xml" value="0.3625" />
+        <entry key="..\:/Users/SENA/Desktop/App-android/app/src/main/res/layout/item_list_view.xml" value="0.3625" />
+        <entry key="..\:/Users/SENA/Desktop/App-android/app/src/main/res/layout/list_productos.xml" value="0.3625" />
+        <entry key="..\:/Users/SENA/Desktop/App-android/app/src/main/res/layout/list_usuarios.xml" value="0.3625" />
+        <entry key="..\:/Users/SENA/Desktop/App-android/app/src/main/res/layout/producto_item.xml" value="0.3625" />
         <entry key="..\:/Users/SENA/Desktop/proyecto-android/app/src/main/res/layout/activity_agregar.xml" value="0.3625" />
         <entry key="..\:/Users/SENA/Desktop/proyecto-android/app/src/main/res/layout/activity_detalles.xml" value="0.3625" />
         <entry key="..\:/Users/SENA/Desktop/proyecto-android/app/src/main/res/layout/activity_main2.xml" value="0.3625" />
         <entry key="..\:/Users/SENA/Desktop/proyecto-android/app/src/main/res/layout/list_usuarios.xml" value="0.3625" />
+        <entry key="..\:/Users/c/Desktop/App-android/App-android/app/src/main/res/drawable/disenobotones.xml" value="0.2505" />
+        <entry key="..\:/Users/c/Desktop/App-android/App-android/app/src/main/res/drawable/disenobotones_favo_compartir.xml" value="0.2505" />
+        <entry key="..\:/Users/c/Desktop/App-android/App-android/app/src/main/res/drawable/favorito.xml" value="0.2505" />
+        <entry key="..\:/Users/c/Desktop/App-android/App-android/app/src/main/res/drawable/ic_angle_double_right.xml" value="0.2505" />
+        <entry key="..\:/Users/c/Desktop/App-android/App-android/app/src/main/res/drawable/ic_baseline_near_me_24.xml" value="0.2505" />
+        <entry key="..\:/Users/c/Desktop/App-android/App-android/app/src/main/res/drawable/ic_heart__1_.xml" value="0.2505" />
+        <entry key="..\:/Users/c/Desktop/App-android/App-android/app/src/main/res/drawable/ic_paper_plane__1_.xml" value="0.2505" />
+        <entry key="..\:/Users/c/Desktop/App-android/App-android/app/src/main/res/layout/activity_agregar.xml" value="0.33" />
+        <entry key="..\:/Users/c/Desktop/App-android/App-android/app/src/main/res/layout/activity_categorias2.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/c/Desktop/App-android/App-android/app/src/main/res/layout/activity_descripcionproducto.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/c/Desktop/App-android/App-android/app/src/main/res/layout/activity_detalles.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/c/Desktop/App-android/App-android/app/src/main/res/layout/activity_detalles_producto.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/c/Desktop/App-android/App-android/app/src/main/res/layout/activity_editar.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/c/Desktop/App-android/App-android/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/c/Desktop/App-android/App-android/app/src/main/res/layout/activity_main2.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/c/Desktop/App-android/App-android/app/src/main/res/layout/activity_main3.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/c/Desktop/App-android/App-android/app/src/main/res/layout/activity_registrar.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/c/Desktop/App-android/App-android/app/src/main/res/layout/cardview.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/c/Desktop/App-android/App-android/app/src/main/res/layout/item_list_view.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/c/Desktop/App-android/App-android/app/src/main/res/layout/list_productos.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/c/Desktop/App-android/App-android/app/src/main/res/layout/list_usuarios.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/c/Desktop/App-android/App-android/app/src/main/res/layout/producto_item.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/c/Desktop/proyecto-android/app/src/main/res/drawable/ic_menu_camera.xml" value="0.2515" />
         <entry key="..\:/Users/c/Desktop/proyecto-android/app/src/main/res/drawable/ic_menu_gallery.xml" value="0.2515" />
         <entry key="..\:/Users/c/Desktop/proyecto-android/app/src/main/res/drawable/ic_menu_slideshow.xml" value="0.2515" />

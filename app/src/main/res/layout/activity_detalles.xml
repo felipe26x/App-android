@@ -42,7 +42,16 @@
                 android:layout_height="wrap_content"
                 android:text="Apellidos : "
                 android:textSize="20sp"
-                android:id="@+id/txtprice"
+                android:id="@+id/txtlastnames"
+                android:layout_marginBottom="10dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nombre Usuario : "
+                android:textSize="20sp"
+                android:id="@+id/txtnameuser"
                 android:layout_marginBottom="10dp"
                 />
             <TextView
@@ -50,7 +59,7 @@
                 android:layout_height="wrap_content"
                 android:text="Correo :"
                 android:textSize="20sp"
-                android:id="@+id/txtinfop"
+                android:id="@+id/txtemail"
                 android:layout_marginBottom="10dp"
                 />
             <TextView
@@ -58,7 +67,7 @@
                 android:layout_height="wrap_content"
                 android:text="numero:"
                 android:textSize="20sp"
-                android:id="@+id/txtdescription"
+                android:id="@+id/txtnumber"
                 android:layout_marginBottom="10dp"
                 />
 

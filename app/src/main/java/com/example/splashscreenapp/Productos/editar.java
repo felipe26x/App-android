@@ -16,7 +16,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.splashscreenapp.MainActivity2;
+import com.example.splashscreenapp.MainActivity3;
 import com.example.splashscreenapp.R;
 
 import java.util.HashMap;
@@ -29,12 +29,12 @@ public class editar extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_editar);
+        setContentView(R.layout.activity_editar_producto);
 
         edId = findViewById(R.id.id);
         edNombre = findViewById(R.id.nombre);
         edPrecio = findViewById(R.id.precio);
-        edInformacion_de_produccion = findViewById(R.id.info);
+        edInformacion_de_produccion = findViewById(R.id.informacion_de_produccion);
         edDescripcion = findViewById(R.id.descripcion);
 
 
@@ -42,11 +42,11 @@ public class editar extends AppCompatActivity {
         position = intent.getExtras().getInt("position");
 
 
-        edId.setText(MainActivity2.employeeArrayList.get(position).getId());
-        edNombre.setText(MainActivity2.employeeArrayList.get(position).getNombres());
-        edPrecio.setText(MainActivity2.employeeArrayList.get(position).getApellidos());
-        edInformacion_de_produccion.setText(MainActivity2.employeeArrayList.get(position).getEmail());
-        edDescripcion.setText(MainActivity2.employeeArrayList.get(position).getNumero_telefono());
+        edId.setText(MainActivity3.productArrayList.get(position).getId());
+        edNombre.setText(MainActivity3.productArrayList.get(position).getNombre());
+        edPrecio.setText(MainActivity3.productArrayList.get(position).getPrecio());
+        edInformacion_de_produccion.setText(MainActivity3.productArrayList.get(position).getInformacion_de_produccion());
+        edDescripcion.setText(MainActivity3.productArrayList.get(position).getDescripcion());
 
 
 
@@ -72,13 +72,13 @@ public class editar extends AppCompatActivity {
         progressDialog.setMessage("Actualizando....");
         progressDialog.show();
 
-        StringRequest request = new StringRequest(Request.Method.POST, "http://10.0.2.2/proyecto/Producto_app/actualizar_.php",
+        StringRequest request = new StringRequest(Request.Method.POST, "http://192.168.0.11/proyecto/Productos_app/actualizar_.php",
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
 
                         Toast.makeText(editar.this, response, Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(getApplicationContext(),MainActivity2.class));
+                        startActivity(new Intent(getApplicationContext(),MainActivity3.class));
                         finish();
                         progressDialog.dismiss();
                     }

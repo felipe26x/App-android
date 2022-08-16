@@ -25,7 +25,7 @@ import java.util.Map;
 
 public class agregar extends AppCompatActivity {
 
-    EditText txtNombres, txtApellidos, txtNumero_telefono, txtEmail, txtContraseña;
+    EditText txtNombres, txtApellidos,txtNombreUsuario, txtNumero_telefono, txtEmail, txtContraseña;
     Button btn_insert;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +33,8 @@ public class agregar extends AppCompatActivity {
         setContentView(R.layout.activity_agregar);
 
         txtNombres = findViewById(R.id.nombre_p);
-        txtApellidos = findViewById(R.id.precio_p);
+        txtApellidos = findViewById(R.id.apellidos);
+        txtNombreUsuario = findViewById(R.id.nombreusuario);
         txtEmail = findViewById(R.id.info_p);
         txtNumero_telefono = findViewById(R.id.descripcion_p);
         txtContraseña = findViewById(R.id.contraseña);
@@ -54,6 +55,7 @@ public class agregar extends AppCompatActivity {
 
         final String nombres = txtNombres.getText().toString().trim();
         final String apellidos = txtApellidos.getText().toString().trim();
+        final String nombreusuario = txtNombreUsuario.getText().toString().trim();
         final String email = txtEmail.getText().toString().trim();
         final String numero_telefono = txtNumero_telefono.getText().toString().trim();
         final String contraseña = txtContraseña.getText().toString().trim();
@@ -69,6 +71,11 @@ public class agregar extends AppCompatActivity {
         }
         else if(apellidos.isEmpty()){
             Toast.makeText(this, "Ingrese tus apellidos", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        else if(nombreusuario.isEmpty()){
+            Toast.makeText(this, "Ingrese tu nombre de usuario", Toast.LENGTH_SHORT).show();
             return;
         }
         else if(email.isEmpty()){
@@ -88,7 +95,7 @@ public class agregar extends AppCompatActivity {
 
         else{
             progressDialog.show();
-            StringRequest request = new StringRequest(Request.Method.POST, "http://10.0.2.2/proyecto/usuarios_app/insertar_.php",
+            StringRequest request = new StringRequest(Request.Method.POST, "http://10.0.2.2/Proyecto/Usuarios_app/insertar_.php",
                     new Response.Listener<String>() {
                         @Override
                         public void onResponse(String response) {
@@ -124,6 +131,7 @@ public class agregar extends AppCompatActivity {
 
                     params.put("nombres",nombres);
                     params.put("apellidos",apellidos);
+                    params.put("nombreusuario",nombreusuario);
                     params.put("email",email);
                     params.put("numero_telefono",numero_telefono);
                     params.put("contraseña",contraseña);

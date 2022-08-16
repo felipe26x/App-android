@@ -24,8 +24,7 @@ public class perfil1 extends AppCompatActivity {
             public void onClick(View view) {
 
 
-                Intent i = new Intent(perfil1.this, Anterior2.class);
-                startActivity(i);
+
             }
         });
 

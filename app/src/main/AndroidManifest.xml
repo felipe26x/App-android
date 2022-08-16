@@ -22,7 +22,24 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         android:usesCleartextTraffic="true">
         <activity
+            android:name="com.example.splashscreenapp.usuarios.detalles"
+            android:exported="false" />
+        <activity
+            android:name="com.example.splashscreenapp.usuarios.editar"
+            android:exported="false" />
+
+        <activity
+            android:name="com.example.splashscreenapp.usuarios.agregar"
+            android:exported="false" />
+
+
+
+        <activity
             android:name=".MainActivity2"
+            android:exported="false" />
+
+        <activity
+            android:name=".MainActivity3"
             android:exported="false" />
         <!--
              TODO: Before you run your application, you need a Google Maps API key.
@@ -46,9 +63,7 @@
         <activity
             android:name=".Login"
             android:exported="false" />
-        <activity
-            android:name=".Loginprueba"
-            android:exported="false" />
+
         <activity
             android:name=".Registro"
             android:exported="false" />
@@ -74,16 +89,10 @@
             android:name=".Favoritos"
             android:exported="false" />
         <activity
-            android:name=".Anterior2"
-            android:exported="false" />
-        <activity
             android:name=".perfil1"
             android:exported="false" />
         <activity
             android:name=".descripcionproducto"
-            android:exported="false" />
-        <activity
-            android:name=".registrar"
             android:exported="false" />
         <activity
             android:name=".SplashScreenActivity"

@@ -19,10 +19,10 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.splashscreenapp.adaptador.Adapter;
-import com.example.splashscreenapp.usuarios.Usuarios;
+import com.example.splashscreenapp.Productos.Productos;
+import com.example.splashscreenapp.Productos.detalles;
+import com.example.splashscreenapp.adaptador.AdapterP;
 import com.example.splashscreenapp.usuarios.agregar;
-import com.example.splashscreenapp.usuarios.detalles;
 import com.example.splashscreenapp.usuarios.editar;
 
 import org.json.JSONArray;
@@ -33,20 +33,20 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-public class MainActivity2 extends AppCompatActivity {
-    ListView listView;
-    Adapter adapter;
-    public static ArrayList<Usuarios> employeeArrayList = new ArrayList<>();
-    String url = "http://10.0.2.2/Proyecto/Usuarios_app/mostrar_.php";
+public class MainActivity3 extends AppCompatActivity {
 
-    Usuarios usuarios;
+    ListView listView;
+    AdapterP adapter;
+    public static ArrayList<Productos> productArrayList = new ArrayList<>();
+    String url = "http://10.0.2.2/Proyecto/Productos_app/mostrar_.php";
+    Productos productos;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.activity_main3);
 
-        listView = findViewById(R.id.myListView);
-        adapter = new Adapter(this,employeeArrayList);
+        listView = findViewById(R.id.myListView3);
+        adapter = new AdapterP(this,productArrayList);
         listView.setAdapter(adapter);
 
 
@@ -58,7 +58,7 @@ public class MainActivity2 extends AppCompatActivity {
                 ProgressDialog progressDialog = new ProgressDialog(view.getContext());
 
                 CharSequence[] dialogItem = {"Ver datos","Editar Datos","Eliminar Datos"};
-                builder.setTitle(employeeArrayList.get(position).getNombres());
+                builder.setTitle(productArrayList.get(position).getNombre());
                 builder.setItems(dialogItem, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int i) {
@@ -80,7 +80,7 @@ public class MainActivity2 extends AppCompatActivity {
 
                             case 2:
 
-                                deleteData(employeeArrayList.get(position).getId());
+                                deleteData(productArrayList.get(position).getId());
 
                                 break;
 
@@ -106,18 +106,18 @@ public class MainActivity2 extends AppCompatActivity {
 
     private void deleteData(final String id) {
 
-        StringRequest request = new StringRequest(Request.Method.POST, "http://10.0.2.2/Proyecto/Usuarios_app/eliminar_.php",
+        StringRequest request = new StringRequest(Request.Method.POST, "http://10.0.2.2/Proyecto/Productos_app/eliminar_.php",
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
 
                         if(response.equalsIgnoreCase("datos eliminados")){
-                            Toast.makeText(MainActivity2.this, "Usuario eliminado correctamente", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(getApplicationContext(),MainActivity2.class));
+                            Toast.makeText(MainActivity3.this, "eliminado correctamente", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(getApplicationContext(),MainActivity.class));
 
                         }
                         else{
-                            Toast.makeText(MainActivity2.this, "no se puedo eliminar", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(MainActivity3.this, "no se puedo eliminar", Toast.LENGTH_SHORT).show();
                         }
 
 
@@ -125,7 +125,7 @@ public class MainActivity2 extends AppCompatActivity {
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(MainActivity2.this, error.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity3.this, error.getMessage(), Toast.LENGTH_SHORT).show();
             }
         }){
             @Override
@@ -150,7 +150,7 @@ public class MainActivity2 extends AppCompatActivity {
                     @Override
                     public void onResponse(String response) {
 
-                        employeeArrayList.clear();
+                        productArrayList.clear();
                         try{
 
                             JSONObject jsonObject = new JSONObject(response);
@@ -165,16 +165,14 @@ public class MainActivity2 extends AppCompatActivity {
                                     JSONObject object = jsonArray.getJSONObject(i);
 
                                     String id = object.getString("id");
-                                    String nombres = object.getString("nombres");
-                                    String apellidos = object.getString("apellidos");
-                                    String nombreusuario = object.getString("nombreusuario");
-                                    String email = object.getString("email");
-                                    String numero_telefono = object.getString("numero_telefono");
-                                    //int fecha_actual = object.getInt("fecha_actual");
+                                    String nombre = object.getString("nombre");
+                                    String precio = object.getString("precio");
+                                    String informacion_de_produccion = object.getString("informacion_de_produccion");
+                                    String descripcion = object.getString("descripcion");
 
 
-                                    usuarios = new Usuarios(id,nombres,apellidos,nombreusuario,email,numero_telefono);
-                                    employeeArrayList.add(usuarios);
+                                    productos = new Productos(id,nombre,precio,informacion_de_produccion,descripcion);
+                                    productArrayList.add(productos);
                                     adapter.notifyDataSetChanged();
 
 
@@ -202,7 +200,7 @@ public class MainActivity2 extends AppCompatActivity {
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(MainActivity2.this, error.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity3.this, error.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
 

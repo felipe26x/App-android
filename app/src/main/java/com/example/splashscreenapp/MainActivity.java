@@ -7,8 +7,10 @@ import android.view.View;
 
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.ViewFlipper;
 
 
@@ -20,11 +22,22 @@ import androidx.cardview.widget.CardView;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentManager;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+import com.example.splashscreenapp.Productos.Productos;
+import com.example.splashscreenapp.adaptador.AdapterP;
 import com.google.android.material.navigation.NavigationView;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,9 +49,9 @@ public class  MainActivity extends AppCompatActivity {
     private Button ver;
     private CardView cardView;
     private ViewFlipper flipper;
-    private RecyclerView recycler, recycler2 , rvNumbers;
-    private RecyclerView.Adapter adapter;
-    private ProductoAdapter adapter2;
+    private RecyclerView recycler, recycler2;
+    private RecyclerView.Adapter adapter2;
+    //private ProductoAdapter adapter2;
     private FragmentManager fragmentManager;
     private RecyclerView.LayoutManager LManager;
     private DrawerLayout drawerLayout;
@@ -47,11 +60,33 @@ public class  MainActivity extends AppCompatActivity {
 
 
 
+    // codigo para los traer los  productos
+
+    ListView listView;
+    AdapterP adapter;
+    public static ArrayList<Productos> productArrayList = new ArrayList<>();
+    String url = "http://10.0.2.2/Proyecto/Productos_app/mostrar_.php";
+    Productos productos;
+
+
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+        listView = findViewById(R.id.myListView3);
+        adapter = new AdapterP(this,productArrayList);
+        listView.setAdapter(adapter);
+
+        retrieveData();
+
+
+
 
 
 
@@ -130,8 +165,8 @@ public class  MainActivity extends AppCompatActivity {
 
         List items = new ArrayList();
 
-        items.add(new Videojuegos(R.drawable.s, "Pelada fresca", 200));
-        items.add(new Videojuegos(R.drawable.platano, "los mejores productos con la mejor calidad", 12));
+        items.add(new Videojuegos(R.drawable.s, "Frutas", 200));
+        items.add(new Videojuegos(R.drawable.platano, "Carnes", 12));
         items.add(new Videojuegos(R.drawable.cafe, "los productos mas frescos y deliciosos", 32));
         items.add(new Videojuegos(R.drawable.s, "100% del campo", 66));
         items.add(new Videojuegos(R.drawable.zana, "", 10));
@@ -140,27 +175,24 @@ public class  MainActivity extends AppCompatActivity {
         LManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         recycler.setLayoutManager(LManager);
 
-        adapter = new VideojuegosAdapter(items);
-        recycler.setAdapter(adapter);
+        adapter2 = new VideojuegosAdapter(items);
+        recycler.setAdapter(adapter2);
 
 
 
         // codigo  reciclador para los productos
 
         // data to populate the RecyclerView with
-        String[] data = {"HOLA","3","4","5","6"};
 
-        // set up the RecyclerView
-        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.rvnumbers);
-        int numberOfColumns = 2;
-        recyclerView.setLayoutManager(new GridLayoutManager(this, numberOfColumns));
-        adapter2 = new ProductoAdapter(this, data,R.drawable.cafe);
-        adapter2.setClickListener(this);
-        recyclerView.setAdapter(adapter2);
 
 
 
     }
+
+
+
+
+
 
     public void showimage(int img){
         ImageView imageView=new ImageView(this);
@@ -227,6 +259,82 @@ public class  MainActivity extends AppCompatActivity {
 
     public void entrar(View view) {
     }
+
+    public void productos(View view) {
+        Intent intent= new Intent(MainActivity.this,MainActivity3.class);
+        startActivity(intent);
+    }
+
+    public void retrieveData(){
+
+        StringRequest request = new StringRequest(Request.Method.POST, url,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+
+                        productArrayList.clear();
+                        try{
+
+                            JSONObject jsonObject = new JSONObject(response);
+                            String exito = jsonObject.getString("exito");
+                            JSONArray jsonArray = jsonObject.getJSONArray("datos");
+
+                            if(exito.equals("1")){
+
+
+                                for(int i=0;i<jsonArray.length();i++){
+
+                                    JSONObject object = jsonArray.getJSONObject(i);
+
+                                    String id = object.getString("id");
+                                    String nombre = object.getString("nombre");
+                                    String precio = object.getString("precio");
+                                    String informacion_de_produccion = object.getString("informacion_de_produccion");
+                                    String descripcion = object.getString("descripcion");
+
+
+                                    productos = new Productos(id,nombre,precio,informacion_de_produccion,descripcion);
+                                    productArrayList.add(productos);
+                                    adapter.notifyDataSetChanged();
+
+
+
+                                }
+
+
+
+                            }
+
+
+
+
+                        }
+                        catch (JSONException e){
+                            e.printStackTrace();
+                        }
+
+
+
+
+
+
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(MainActivity.this, error.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        requestQueue.add(request);
+
+
+
+
+    }
+
+
 }
 
 

@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -12,6 +13,7 @@ import androidx.annotation.Nullable;
 
 import com.example.splashscreenapp.R;
 import com.example.splashscreenapp.usuarios.Usuarios;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -19,6 +21,7 @@ public class Adapter extends ArrayAdapter<Usuarios> {
 
 Context context;
 List<Usuarios> arrayUsuarios;
+private String doamin_image = "http://10.0.2.2/proyecto/media/userperfil";
 
     public Adapter(@NonNull Context context, List<Usuarios> arrayUsuarios) {
         super(context, R.layout.list_usuarios,arrayUsuarios);
@@ -34,8 +37,11 @@ List<Usuarios> arrayUsuarios;
         TextView tvID = view.findViewById(R.id.txt_id);
         TextView tvName = view.findViewById(R.id.txt_name);
 
+
         tvID.setText(arrayUsuarios.get(position).getId());
         tvName.setText(arrayUsuarios.get(position).getNombres());
+
+
 
         return view;
     }

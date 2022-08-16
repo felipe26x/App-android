@@ -18,6 +18,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.splashscreenapp.MainActivity2;
+import com.example.splashscreenapp.MainActivity3;
 import com.example.splashscreenapp.R;
 
 import java.util.HashMap;
@@ -94,7 +95,7 @@ public class agregar extends AppCompatActivity {
 
 
                                 progressDialog.dismiss();
-                                startActivity(new Intent(getApplicationContext(), MainActivity2.class));
+                                startActivity(new Intent(getApplicationContext(), MainActivity3.class));
                                 finish();
                             }
                             else{

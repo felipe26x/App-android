@@ -24,7 +24,7 @@ import java.util.Map;
 
 public class editar extends AppCompatActivity {
 
-    EditText edId, edNombres,edApellidos, edEmail, edNumero_telefono;
+    EditText edId, edNombres,edApellidos,edNombreusuario, edEmail, edNumero_telefono;
     private int position;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,9 +33,10 @@ public class editar extends AppCompatActivity {
 
         edId = findViewById(R.id.id);
         edNombres = findViewById(R.id.nombre);
-        edApellidos = findViewById(R.id.apellido);
-        edEmail = findViewById(R.id.correo);
-        edNumero_telefono = findViewById(R.id.telefono);
+        edApellidos = findViewById(R.id.apellidos);
+        edNombreusuario = findViewById(R.id.nombreusuario);
+        edEmail = findViewById(R.id.email);
+        edNumero_telefono = findViewById(R.id.numero_telefono);
 
 
         Intent intent = getIntent();
@@ -45,6 +46,7 @@ public class editar extends AppCompatActivity {
         edId.setText(MainActivity2.employeeArrayList.get(position).getId());
         edNombres.setText(MainActivity2.employeeArrayList.get(position).getNombres());
         edApellidos.setText(MainActivity2.employeeArrayList.get(position).getApellidos());
+        edNombreusuario.setText(MainActivity2.employeeArrayList.get(position).getNombreusuario());
         edEmail.setText(MainActivity2.employeeArrayList.get(position).getEmail());
         edNumero_telefono.setText(MainActivity2.employeeArrayList.get(position).getNumero_telefono());
 
@@ -59,6 +61,7 @@ public class editar extends AppCompatActivity {
         final String id = edId.getText().toString();
         final String nombres = edNombres.getText().toString();
         final String apellidos = edApellidos.getText().toString();
+        final String nombreusuario = edNombreusuario.getText().toString();
         final String email = edEmail.getText().toString();
         final String numero_telefono = edNumero_telefono.getText().toString();
 
@@ -72,7 +75,7 @@ public class editar extends AppCompatActivity {
         progressDialog.setMessage("Actualizando....");
         progressDialog.show();
 
-        StringRequest request = new StringRequest(Request.Method.POST, "http://10.0.2.2/proyecto/usuarios_app/actualizar_.php",
+        StringRequest request = new StringRequest(Request.Method.POST, "http://10.0.2.2/Proyecto/Usuarios_app/actualizar_.php",
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -100,6 +103,7 @@ public class editar extends AppCompatActivity {
                 params.put("id",id);
                 params.put("nombres",nombres);
                 params.put("apellidos",apellidos);
+                params.put("nombreusuario",nombreusuario);
                 params.put("email",email);
                 params.put("numero_telefono",numero_telefono);
 

@@ -36,11 +36,21 @@
         android:textSize="20sp" />
 
     <EditText
-        android:id="@+id/apellido"
+        android:id="@+id/apellidos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:hint="apellidos:"
+        android:inputType="textPersonName"
+        android:textSize="20sp" />
+
+
+    <EditText
+        android:id="@+id/nombreusuario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Nombre Usuario:"
         android:inputType="textPersonName"
         android:textSize="20sp" />
 
@@ -49,13 +59,13 @@
         android:layout_height="wrap_content"
         android:textSize="20sp"
         android:hint="correo:"
-        android:id="@+id/correo"
+        android:id="@+id/email"
         android:layout_marginTop="10dp"
         android:inputType="textEmailAddress"
         />
 
     <EditText
-        android:id="@+id/telefono"
+        android:id="@+id/numero_telefono"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
