@@ -138,7 +138,7 @@
                 android:textColor="#606060"
                 android:fontFamily="sans-serif"
                 android:textSize="18sp"
-               />
+                />
 
 
             <TextView

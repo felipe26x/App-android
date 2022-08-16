@@ -8,11 +8,12 @@
     tools:context=".MainActivity"
     tools:layout_editor_absoluteY="661dp">
 
+
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/relat"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/relat"
-        android:background="#F4F4F4">
+        android:background="#FFFFFF">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -26,7 +27,7 @@
             android:id="@+id/scrollView2"
             android:layout_width="match_parent"
             android:layout_height="658dp"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="50dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -38,11 +39,37 @@
 
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="20dp"
+                    app:cardBackgroundColor="#D8D7D7"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="2dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.SearchView
+                        android:id="@+id/svSearch"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="#989797"
+                        app:iconifiedByDefault="false"
+                        app:queryHint="Buscar">
+
+                    </androidx.appcompat.widget.SearchView>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
-                    android:layout_marginBottom="40dp"
+                    android:layout_marginBottom="10dp"
                     app:cardBackgroundColor="#FFFFFF"
                     app:cardCornerRadius="22dp"
                     app:cardElevation="8dp">
@@ -57,6 +84,15 @@
 
                     </ViewFlipper>
                 </androidx.cardview.widget.CardView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvLista"
+                    android:layout_width="match_parent"
+                    android:layout_height="600dp"
+                    android:layout_marginTop="5dp">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
 
                 <TextView
                     android:id="@+id/textView2"
@@ -279,9 +315,9 @@
                         android:layout_height="36dp"
                         android:layout_marginLeft="190dp"
                         android:layout_marginTop="150dp"
-                        android:onClick="listar"
                         android:layout_marginBottom="10dp"
                         android:background="@drawable/disenobotones"
+                        android:onClick="listar"
                         android:text="Ver"
                         android:textColor="#FFFFFF" />
 
@@ -349,8 +385,8 @@
                         android:layout_marginLeft="190dp"
                         android:layout_marginTop="150dp"
                         android:layout_marginBottom="10dp"
-                        android:onClick="productos"
                         android:background="@drawable/disenobotones"
+                        android:onClick="productos"
                         android:text="Ver"
                         android:textColor="#FFFFFF" />
 
@@ -400,16 +436,6 @@
 
 
                 </androidx.cardview.widget.CardView>
-
-
-                <ListView
-                    android:id="@+id/myListView3"
-                    android:layout_width="match_parent"
-                    android:layout_height="1200dp"
-
-                    android:layout_marginBottom="40dp"
-                    android:scrollbars="vertical"></ListView>
-
 
 
             </LinearLayout>

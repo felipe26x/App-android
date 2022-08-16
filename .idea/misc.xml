@@ -3,13 +3,22 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/SENA/Desktop/App-android/app/src/main/res/drawable/ic_envelope.xml" value="0.325" />
+        <entry key="..\:/Users/SENA/Desktop/App-android/app/src/main/res/drawable/ic_heart__1_.xml" value="0.325" />
+        <entry key="..\:/Users/SENA/Desktop/App-android/app/src/main/res/drawable/ic_id_badge.xml" value="0.325" />
+        <entry key="..\:/Users/SENA/Desktop/App-android/app/src/main/res/drawable/ic_paper_plane__1_.xml" value="0.325" />
+        <entry key="..\:/Users/SENA/Desktop/App-android/app/src/main/res/layout/activity_admin.xml" value="0.3625" />
         <entry key="..\:/Users/SENA/Desktop/App-android/app/src/main/res/layout/activity_anterior2.xml" value="0.3625" />
+        <entry key="..\:/Users/SENA/Desktop/App-android/app/src/main/res/layout/activity_buscador.xml" value="0.3625" />
         <entry key="..\:/Users/SENA/Desktop/App-android/app/src/main/res/layout/activity_categorias2.xml" value="0.3625" />
+        <entry key="..\:/Users/SENA/Desktop/App-android/app/src/main/res/layout/activity_detail.xml" value="0.3625" />
         <entry key="..\:/Users/SENA/Desktop/App-android/app/src/main/res/layout/activity_detalles.xml" value="0.3625" />
         <entry key="..\:/Users/SENA/Desktop/App-android/app/src/main/res/layout/activity_detalles_producto.xml" value="0.3625" />
         <entry key="..\:/Users/SENA/Desktop/App-android/app/src/main/res/layout/activity_editar.xml" value="0.3625" />
         <entry key="..\:/Users/SENA/Desktop/App-android/app/src/main/res/layout/activity_editar_producto.xml" value="0.3625" />
         <entry key="..\:/Users/SENA/Desktop/App-android/app/src/main/res/layout/activity_ejemplo.xml" value="0.3625" />
+        <entry key="..\:/Users/SENA/Desktop/App-android/app/src/main/res/layout/activity_main.xml" value="0.3625" />
+        <entry key="..\:/Users/SENA/Desktop/App-android/app/src/main/res/layout/activity_main3.xml" value="0.3625" />
         <entry key="..\:/Users/SENA/Desktop/App-android/app/src/main/res/layout/activity_perfil1.xml" value="0.3625" />
         <entry key="..\:/Users/SENA/Desktop/App-android/app/src/main/res/layout/app_bar.xml" value="0.3625" />
         <entry key="..\:/Users/SENA/Desktop/App-android/app/src/main/res/layout/cardview.xml" value="0.3625" />
@@ -20,6 +29,7 @@
         <entry key="..\:/Users/SENA/Desktop/App-android/app/src/main/res/layout/list_productos.xml" value="0.3625" />
         <entry key="..\:/Users/SENA/Desktop/App-android/app/src/main/res/layout/list_usuarios.xml" value="0.3625" />
         <entry key="..\:/Users/SENA/Desktop/App-android/app/src/main/res/layout/producto_item.xml" value="0.3625" />
+        <entry key="..\:/Users/SENA/Desktop/App-android/app/src/main/res/menu/menu_for_navigationview.xml" value="0.3625" />
         <entry key="..\:/Users/SENA/Desktop/proyecto-android/app/src/main/res/layout/activity_agregar.xml" value="0.3625" />
         <entry key="..\:/Users/SENA/Desktop/proyecto-android/app/src/main/res/layout/activity_detalles.xml" value="0.3625" />
         <entry key="..\:/Users/SENA/Desktop/proyecto-android/app/src/main/res/layout/activity_main2.xml" value="0.3625" />

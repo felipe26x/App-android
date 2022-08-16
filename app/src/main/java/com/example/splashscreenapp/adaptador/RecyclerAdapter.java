@@ -54,7 +54,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
                 .load(doamin_image+item.getimageResource())
                 .into(holder.imageItem);
         holder.tvTitulo.setText(item.getnombre());
-        holder.tvDescripcion.setText(item.getDescripcion());
+        //holder.tvDescripcion.setText(item.getDescripcion());
         holder.tvprecio.setText(item.getprecio());
         holder.itemView.setOnClickListener(new View.OnClickListener(){
 
@@ -101,7 +101,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
     public class RecyclerHolder extends RecyclerView.ViewHolder {
         private ImageView imageItem;
         private TextView tvTitulo;
-        private TextView tvDescripcion;
+        //private TextView tvDescripcion;
         private TextView tvprecio;
 
         public RecyclerHolder(@NonNull View itemView) {
@@ -109,7 +109,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
 
             imageItem = itemView.findViewById(R.id.imageItem);
             tvTitulo = itemView.findViewById(R.id.tvTitulo);
-            tvDescripcion = itemView.findViewById(R.id.tvDescripcion);
+            //tvDescripcion = itemView.findViewById(R.id.tvDescripcion);
             tvprecio= itemView.findViewById(R.id.tvPrecio);
         }
     }

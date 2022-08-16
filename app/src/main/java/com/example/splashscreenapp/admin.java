@@ -21,4 +21,19 @@ public class admin extends AppCompatActivity {
 
     }
 
+
+    public void usuario_a (View view){
+        Intent intent = new Intent(admin. this, MainActivity2.class);
+        startActivity(intent);
+
+    }
+
+
+
+    public void productos_a (View view){
+        Intent intent = new Intent(admin. this, MainActivity3.class);
+        startActivity(intent);
+
+    }
+
 }

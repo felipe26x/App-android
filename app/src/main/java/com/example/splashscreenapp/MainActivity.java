@@ -17,6 +17,7 @@ import android.widget.ViewFlipper;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
 import androidx.core.view.GravityCompat;
@@ -27,12 +28,15 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
-import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.splashscreenapp.Productos.Productos;
 import com.example.splashscreenapp.adaptador.AdapterP;
+import com.example.splashscreenapp.adaptador.RecyclerAdapter;
+import com.example.splashscreenapp.model.ItemList;
+import com.example.splashscreenapp.retrofit_data.RetrofilApiService;
+import com.example.splashscreenapp.retrofit_data.RetrofitClient;
 import com.google.android.material.navigation.NavigationView;
 
 import org.json.JSONArray;
@@ -42,8 +46,12 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
-public class  MainActivity extends AppCompatActivity {
+
+public class  MainActivity extends AppCompatActivity implements RecyclerAdapter.RecyclerItemClick, SearchView.OnQueryTextListener {
     private TextView textView;
     private RelativeLayout relativeLayout;
     private Button ver;
@@ -59,14 +67,18 @@ public class  MainActivity extends AppCompatActivity {
     private Toolbar toolbar;
 
 
+    // CODIGO PARA LLAMAR LOS PRODUCTOS
 
-    // codigo para los traer los  productos
+    private RecyclerView rvLista;
+    private SearchView svSearch;
+    private RecyclerAdapter adapter;
+    private List<ItemList> items;
+    private RetrofilApiService retrofilApiService;
 
-    ListView listView;
-    AdapterP adapter;
-    public static ArrayList<Productos> productArrayList = new ArrayList<>();
-    String url = "http://10.0.2.2/Proyecto/Productos_app/mostrar_.php";
-    Productos productos;
+
+
+
+
 
 
 
@@ -78,12 +90,10 @@ public class  MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        initViews();
+        initValues();
+        initListener();
 
-        listView = findViewById(R.id.myListView3);
-        adapter = new AdapterP(this,productArrayList);
-        listView.setAdapter(adapter);
-
-        retrieveData();
 
 
 
@@ -136,7 +146,18 @@ public class  MainActivity extends AppCompatActivity {
 
 
 
-                    case R.id.Configuracion:
+                    case R.id.Favoritos:
+                        Intent intent2 = new Intent(MainActivity.this, Favoritos.class);
+                        startActivity(intent2);
+                        break;
+
+
+                    case R.id.Administraccion:
+                        Intent intent3 = new Intent(MainActivity.this, admin.class);
+                        startActivity(intent3);
+                        break;
+
+
 
 
 
@@ -265,74 +286,70 @@ public class  MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void retrieveData(){
 
-        StringRequest request = new StringRequest(Request.Method.POST, url,
-                new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
+    private void initViews(){
+        rvLista = findViewById(R.id.rvLista);
+        svSearch = findViewById(R.id.svSearch);
 
-                        productArrayList.clear();
-                        try{
+    }
 
-                            JSONObject jsonObject = new JSONObject(response);
-                            String exito = jsonObject.getString("exito");
-                            JSONArray jsonArray = jsonObject.getJSONArray("datos");
+    private void initValues(){
+        retrofilApiService = RetrofitClient.getApiService();
+        LinearLayoutManager manager = new LinearLayoutManager(this);
+        rvLista.setLayoutManager(manager);
 
-                            if(exito.equals("1")){
+        getItemSQL();
 
+    }
 
-                                for(int i=0;i<jsonArray.length();i++){
-
-                                    JSONObject object = jsonArray.getJSONObject(i);
-
-                                    String id = object.getString("id");
-                                    String nombre = object.getString("nombre");
-                                    String precio = object.getString("precio");
-                                    String informacion_de_produccion = object.getString("informacion_de_produccion");
-                                    String descripcion = object.getString("descripcion");
-
-
-                                    productos = new Productos(id,nombre,precio,informacion_de_produccion,descripcion);
-                                    productArrayList.add(productos);
-                                    adapter.notifyDataSetChanged();
+    private void initListener() { svSearch.setOnQueryTextListener(this);}
 
 
 
-                                }
-
-
-
-                            }
-
-
-
-
-                        }
-                        catch (JSONException e){
-                            e.printStackTrace();
-                        }
-
-
-
-
-
-
-                    }
-                }, new Response.ErrorListener() {
+    private void getItemSQL(){
+        retrofilApiService.getItemsDB().enqueue(new Callback<List<ItemList>>() {
             @Override
-            public void onErrorResponse(VolleyError error) {
-                Toast.makeText(MainActivity.this, error.getMessage(), Toast.LENGTH_SHORT).show();
+            public void onResponse(Call<List<ItemList>> call, Response<List<ItemList>> response) {
+                items = response.body();
+                adapter = new RecyclerAdapter(items, MainActivity.this);
+                rvLista.setAdapter(adapter);
+            }
+
+            @Override
+            public void onFailure(Call<List<ItemList>> call, Throwable t) {
+                Toast.makeText(MainActivity.this, "Error"+t.getMessage(), Toast.LENGTH_SHORT).show();
+
+
             }
         });
 
-        RequestQueue requestQueue = Volley.newRequestQueue(this);
-        requestQueue.add(request);
+    }
 
 
 
+
+
+
+    @Override
+    public boolean onQueryTextSubmit(String query) {
+        return false;
+    }
+
+    @Override
+    public boolean onQueryTextChange(String newText) {
+        adapter.filter(newText);
+        return false;
+    }
+
+    @Override
+    public void itemClick(ItemList item) {
+        Intent intent = new Intent(this, DetailActivity.class);
+        intent.putExtra("itemDetail", item);
+        startActivity(intent);
 
     }
+
+
 
 
 }
