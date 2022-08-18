@@ -20,10 +20,10 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.splashscreenapp.Productos.Productos;
-import com.example.splashscreenapp.Productos.detalles;
+import com.example.splashscreenapp.Productos.detalles_p;
+import com.example.splashscreenapp.Productos.editar_p;
 import com.example.splashscreenapp.adaptador.AdapterP;
 import com.example.splashscreenapp.usuarios.agregar;
-import com.example.splashscreenapp.usuarios.editar;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -67,13 +67,13 @@ public class MainActivity3 extends AppCompatActivity {
 
                             case 0:
 
-                                startActivity(new Intent(getApplicationContext(), detalles.class)
+                                startActivity(new Intent(getApplicationContext(), detalles_p.class)
                                         .putExtra("position",position));
 
                                 break;
 
                             case 1:
-                                startActivity(new Intent(getApplicationContext(), editar.class)
+                                startActivity(new Intent(getApplicationContext(), editar_p.class)
                                         .putExtra("position",position));
 
                                 break;

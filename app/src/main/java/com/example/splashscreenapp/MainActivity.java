@@ -159,6 +159,14 @@ public class  MainActivity extends AppCompatActivity implements RecyclerAdapter.
 
 
 
+                    case R.id.Ayuda:
+                        Intent intent4 = new Intent(MainActivity.this, Ayuda.class);
+                        startActivity(intent4);
+                        break;
+
+
+
+
 
 
                     case R.id.CerrarCesion:

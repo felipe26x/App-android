@@ -22,7 +22,7 @@ import com.example.splashscreenapp.R;
 import java.util.HashMap;
 import java.util.Map;
 
-public class editar extends AppCompatActivity {
+public class editar_p extends AppCompatActivity {
 
     EditText edId, edNombre,edPrecio, edInformacion_de_produccion, edDescripcion;
     private int position;
@@ -72,12 +72,12 @@ public class editar extends AppCompatActivity {
         progressDialog.setMessage("Actualizando....");
         progressDialog.show();
 
-        StringRequest request = new StringRequest(Request.Method.POST, "http://192.168.0.11/proyecto/Productos_app/actualizar_.php",
+        StringRequest request = new StringRequest(Request.Method.POST, "http://10.0.2.2/Proyecto/Productos_app/actualizar_.php",
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
 
-                        Toast.makeText(editar.this, response, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(editar_p.this, response, Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(getApplicationContext(),MainActivity3.class));
                         finish();
                         progressDialog.dismiss();
@@ -86,7 +86,7 @@ public class editar extends AppCompatActivity {
             @Override
             public void onErrorResponse(VolleyError error) {
 
-                Toast.makeText(editar.this, error.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(editar_p.this, error.getMessage(), Toast.LENGTH_SHORT).show();
                 progressDialog.dismiss();
 
             }
@@ -110,7 +110,7 @@ public class editar extends AppCompatActivity {
             }
         };
 
-        RequestQueue requestQueue = Volley.newRequestQueue(editar.this);
+        RequestQueue requestQueue = Volley.newRequestQueue(editar_p.this);
         requestQueue.add(request);
 
 

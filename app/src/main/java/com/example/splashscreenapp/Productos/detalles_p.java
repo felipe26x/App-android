@@ -11,7 +11,7 @@ import android.widget.TextView;
 import com.example.splashscreenapp.MainActivity3;
 import com.example.splashscreenapp.R;
 
-public class detalles extends AppCompatActivity {
+public class detalles_p extends AppCompatActivity {
 
     TextView tvid,tvname,tvprice,tvinfop,tvdescription;
     int position;
@@ -34,7 +34,6 @@ public class detalles extends AppCompatActivity {
         position = intent.getExtras().getInt("position");
 
         tvid.setText("ID: " + MainActivity3.productArrayList.get(position).getId());
-
         tvname.setText("Name: " + MainActivity3.productArrayList.get(position).getNombre());
         tvprice.setText("price: " + MainActivity3.productArrayList.get(position).getPrecio());
         tvinfop.setText("Informacion: " + MainActivity3.productArrayList.get(position).getInformacion_de_produccion());

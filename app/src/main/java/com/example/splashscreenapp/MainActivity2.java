@@ -170,10 +170,11 @@ public class MainActivity2 extends AppCompatActivity {
                                     String nombreusuario = object.getString("nombreusuario");
                                     String email = object.getString("email");
                                     String numero_telefono = object.getString("numero_telefono");
+                                    String image_perfil = object.getString("image_perfil");
                                     //int fecha_actual = object.getInt("fecha_actual");
 
 
-                                    usuarios = new Usuarios(id,nombres,apellidos,nombreusuario,email,numero_telefono);
+                                    usuarios = new Usuarios(id,nombres,apellidos,nombreusuario,email,numero_telefono,image_perfil);
                                     employeeArrayList.add(usuarios);
                                     adapter.notifyDataSetChanged();
 

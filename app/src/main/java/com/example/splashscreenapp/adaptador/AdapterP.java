@@ -32,7 +32,6 @@ public class AdapterP extends ArrayAdapter<Productos> {
     public View getView(int position, @Nullable View convertView, @NonNull
     ViewGroup parent) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_productos,null,true);
-
         TextView tvName = view.findViewById(R.id.txt_name_p);
         TextView tvPrice = view.findViewById(R.id.txt_price_p);
 

@@ -62,4 +62,9 @@ public class descripcionproducto extends AppCompatActivity {
     }
 
 
+    public void lo(View view) {
+        Intent intent= new Intent(descripcionproducto.this,Location.class);
+        startActivity(intent);
+
+    }
 }

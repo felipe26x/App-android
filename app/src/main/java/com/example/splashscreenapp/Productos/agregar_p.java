@@ -17,14 +17,13 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.splashscreenapp.MainActivity2;
 import com.example.splashscreenapp.MainActivity3;
 import com.example.splashscreenapp.R;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class agregar extends AppCompatActivity {
+public class agregar_p extends AppCompatActivity {
 
     EditText txtNombre, txtPrecio, txtInformacion_de_produccion, txtDescripcion;
     Button btn_insert;
@@ -90,7 +89,7 @@ public class agregar extends AppCompatActivity {
                         public void onResponse(String response) {
 
                             if(response.equalsIgnoreCase("datas insertados")){
-                                Toast.makeText(agregar.this, "datas insertados", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(agregar_p.this, "datas insertados", Toast.LENGTH_SHORT).show();
 
 
 
@@ -99,7 +98,7 @@ public class agregar extends AppCompatActivity {
                                 finish();
                             }
                             else{
-                                Toast.makeText(agregar.this, response, Toast.LENGTH_SHORT).show();
+                                Toast.makeText(agregar_p.this, response, Toast.LENGTH_SHORT).show();
                                 progressDialog.dismiss();
                             }
 
@@ -107,7 +106,7 @@ public class agregar extends AppCompatActivity {
                     }, new Response.ErrorListener() {
                 @Override
                 public void onErrorResponse(VolleyError error) {
-                    Toast.makeText(agregar.this, error.getMessage(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(agregar_p.this, error.getMessage(), Toast.LENGTH_SHORT).show();
                     progressDialog.dismiss();
                 }
             }
@@ -133,7 +132,7 @@ public class agregar extends AppCompatActivity {
             };
 
 
-            RequestQueue requestQueue = Volley.newRequestQueue(agregar.this);
+            RequestQueue requestQueue = Volley.newRequestQueue(agregar_p.this);
             requestQueue.add(request);
 
 

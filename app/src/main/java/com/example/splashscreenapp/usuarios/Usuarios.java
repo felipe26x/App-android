@@ -2,19 +2,29 @@ package com.example.splashscreenapp.usuarios;
 
 public class Usuarios {
     String id,nombres,apellidos,nombreusuario,email,numero_telefono;
+    String image_perfil;
 
 
 
     public Usuarios() {
     }
 
-    public Usuarios(String id, String nombres,String apellidos ,String nombreusuario ,String email, String numero_telefono) {
+    public Usuarios(String id, String nombres,String apellidos ,String nombreusuario ,String email, String numero_telefono,String image_perfil) {
         this.id = id;
         this.nombres = nombres;
         this.apellidos = apellidos;
         this.nombreusuario = nombreusuario;
         this.email = email;
         this.numero_telefono = numero_telefono;
+        this.image_perfil = image_perfil;
+    }
+
+    public String getImage_perfil() {
+        return image_perfil;
+    }
+
+    public void setImage_perfil(String image_perfil) {
+        this.image_perfil = image_perfil;
     }
 
     public String getId() {

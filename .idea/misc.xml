@@ -56,6 +56,26 @@
         <entry key="..\:/Users/c/Desktop/App-android/App-android/app/src/main/res/layout/list_productos.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/c/Desktop/App-android/App-android/app/src/main/res/layout/list_usuarios.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/c/Desktop/App-android/App-android/app/src/main/res/layout/producto_item.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/c/Desktop/App-android/app/src/main/res/drawable/degradado.xml" value="0.2505" />
+        <entry key="..\:/Users/c/Desktop/App-android/app/src/main/res/drawable/disenioperfil.xml" value="0.2505" />
+        <entry key="..\:/Users/c/Desktop/App-android/app/src/main/res/drawable/disenoformproducto.xml" value="0.2505" />
+        <entry key="..\:/Users/c/Desktop/App-android/app/src/main/res/layout/activity_admin.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/c/Desktop/App-android/app/src/main/res/layout/activity_ayuda.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/c/Desktop/App-android/app/src/main/res/layout/activity_descripcionproducto.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/c/Desktop/App-android/app/src/main/res/layout/activity_detalles_producto.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/c/Desktop/App-android/app/src/main/res/layout/activity_editar.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/c/Desktop/App-android/app/src/main/res/layout/activity_editar_producto.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/c/Desktop/App-android/app/src/main/res/layout/activity_ejemplo.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/c/Desktop/App-android/app/src/main/res/layout/activity_location.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/c/Desktop/App-android/app/src/main/res/layout/activity_login.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/c/Desktop/App-android/app/src/main/res/layout/activity_loginprueba.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/c/Desktop/App-android/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/c/Desktop/App-android/app/src/main/res/layout/activity_notificacion.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/c/Desktop/App-android/app/src/main/res/layout/activity_sproducto.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/c/Desktop/App-android/app/src/main/res/layout/list_productos.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/c/Desktop/App-android/app/src/main/res/layout/list_usuarios.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/c/Desktop/App-android/app/src/main/res/layout/prueba.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/c/Desktop/App-android/app/src/main/res/menu/menu_for_navigationview.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/c/Desktop/proyecto-android/app/src/main/res/drawable/ic_menu_camera.xml" value="0.2515" />
         <entry key="..\:/Users/c/Desktop/proyecto-android/app/src/main/res/drawable/ic_menu_gallery.xml" value="0.2515" />
         <entry key="..\:/Users/c/Desktop/proyecto-android/app/src/main/res/drawable/ic_menu_slideshow.xml" value="0.2515" />

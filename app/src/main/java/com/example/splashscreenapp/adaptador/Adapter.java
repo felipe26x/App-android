@@ -11,6 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.bumptech.glide.Glide;
 import com.example.splashscreenapp.R;
 import com.example.splashscreenapp.usuarios.Usuarios;
 import com.squareup.picasso.Picasso;
@@ -36,10 +37,15 @@ private String doamin_image = "http://10.0.2.2/proyecto/media/userperfil";
 
         TextView tvID = view.findViewById(R.id.txt_id);
         TextView tvName = view.findViewById(R.id.txt_name);
+        ImageView tvimage_perfil = view.findViewById(R.id.image_perfil);
 
 
         tvID.setText(arrayUsuarios.get(position).getId());
         tvName.setText(arrayUsuarios.get(position).getNombres());
+        Picasso.get()
+                .load(arrayUsuarios.get(position).getImage_perfil())
+                .into(tvimage_perfil);
+
 
 
 

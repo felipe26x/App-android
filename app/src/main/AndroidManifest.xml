@@ -22,22 +22,32 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         android:usesCleartextTraffic="true">
         <activity
-            android:name="com.example.splashscreenapp.usuarios.detalles"
+            android:name=".Notificacion"
             android:exported="false" />
         <activity
-            android:name="com.example.splashscreenapp.usuarios.editar"
+            android:name=".usuarios.detalles"
             android:exported="false" />
+        <activity
+            android:name=".usuarios.editar"
+            android:exported="false" />
+        <activity
+            android:name=".usuarios.agregar"
+            android:exported="false" />
+
+
 
         <activity
-            android:name="com.example.splashscreenapp.usuarios.agregar"
+            android:name=".Productos.detalles_p"
             android:exported="false" />
-
-
-
+        <activity
+            android:name=".Productos.editar_p"
+            android:exported="false" />
+        <activity
+            android:name=".Productos.agregar_p"
+            android:exported="false" />
         <activity
             android:name=".MainActivity2"
             android:exported="false" />
-
         <activity
             android:name=".MainActivity3"
             android:exported="false" />
@@ -63,7 +73,6 @@
         <activity
             android:name=".Login"
             android:exported="false" />
-
         <activity
             android:name=".Registro"
             android:exported="false" />

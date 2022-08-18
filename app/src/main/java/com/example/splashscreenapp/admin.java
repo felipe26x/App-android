@@ -36,4 +36,10 @@ public class admin extends AppCompatActivity {
 
     }
 
+    public void noti_a (View view){
+        Intent intent = new Intent(admin. this, Notificacion.class);
+        startActivity(intent);
+
+    }
+
 }
