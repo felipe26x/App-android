@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 
@@ -24,20 +25,26 @@ public class detalles_p extends AppCompatActivity {
 
         //Initializing Views
         tvid = findViewById(R.id.txtid);
-        tvname = findViewById(R.id.txtname);
-        tvprice = findViewById(R.id.txtlastnames);
-        tvinfop = findViewById(R.id.txtemail);
-        tvdescription = findViewById(R.id.txtnumber);
+        tvname = findViewById(R.id.txtnombre_p);
+        tvprice = findViewById(R.id.txtprecio_p);
+        tvinfop = findViewById(R.id.txtinfop_p);
+        tvdescription = findViewById(R.id.txtdescription_p);
 
 
         Intent intent = getIntent();
         position = intent.getExtras().getInt("position");
 
         tvid.setText("ID: " + MainActivity3.productArrayList.get(position).getId());
-        tvname.setText("Name: " + MainActivity3.productArrayList.get(position).getNombre());
-        tvprice.setText("price: " + MainActivity3.productArrayList.get(position).getPrecio());
-        tvinfop.setText("Informacion: " + MainActivity3.productArrayList.get(position).getInformacion_de_produccion());
-        tvdescription.setText("Descripcion: " + MainActivity3.productArrayList.get(position).getDescripcion());
+        tvname.setText("" + MainActivity3.productArrayList.get(position).getNombre());
+        tvprice.setText("$" + MainActivity3.productArrayList.get(position).getPrecio());
+        tvinfop.setText("" + MainActivity3.productArrayList.get(position).getInformacion_de_produccion());
+        tvdescription.setText("" + MainActivity3.productArrayList.get(position).getDescripcion());
 
+    }
+
+
+    public void volver(View view) {
+        Intent intent = new Intent(this, MainActivity3.class);
+        startActivity(intent);
     }
 }

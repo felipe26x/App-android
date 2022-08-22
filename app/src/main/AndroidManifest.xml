@@ -77,9 +77,6 @@
             android:name=".Registro"
             android:exported="false" />
         <activity
-            android:name=".Ayuda"
-            android:exported="false" />
-        <activity
             android:name=".Categorias2"
             android:exported="false" />
         <activity
@@ -99,9 +96,6 @@
             android:exported="false" />
         <activity
             android:name=".perfil1"
-            android:exported="false" />
-        <activity
-            android:name=".descripcionproducto"
             android:exported="false" />
         <activity
             android:name=".SplashScreenActivity"

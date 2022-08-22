@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,78 +10,246 @@
     tools:context=".usuarios.editar">
 
     <TextView
+        android:id="@+id/textView40"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="ingrese usuarios"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
         android:gravity="center"
+        android:text="Editar Usuario"
         android:textSize="28sp"
-        />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
     <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="ID"
         android:id="@+id/id"
-        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
         android:enabled="false"
-        />
-
-    <EditText
-        android:id="@+id/nombre"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:hint="nombres:"
-        android:inputType="textPersonName"
-        android:textSize="20sp" />
-
-    <EditText
-        android:id="@+id/apellidos"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:hint="apellidos:"
-        android:inputType="textPersonName"
-        android:textSize="20sp" />
-
-
-    <EditText
-        android:id="@+id/nombreusuario"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:hint="Nombre Usuario:"
-        android:inputType="textPersonName"
-        android:textSize="20sp" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:hint="ID"
         android:textSize="20sp"
-        android:hint="correo:"
-        android:id="@+id/email"
-        android:layout_marginTop="10dp"
-        android:inputType="textEmailAddress"
-        />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView40" />
 
-    <EditText
-        android:id="@+id/numero_telefono"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/textView41"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Nombres"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id" />
+
+    <TextView
+        android:id="@+id/textView44"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Apellidos"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView10" />
+
+    <TextView
+        android:id="@+id/textView45"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Nombre Usario"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView11" />
+
+    <TextView
+        android:id="@+id/textView46"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Email"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView12" />
+
+    <TextView
+        android:id="@+id/textView47"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Numero "
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView13" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView10"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
-        android:hint="telefono:"
-        android:inputType="textPersonName"
-        android:textSize="20sp" />
+        android:layout_marginEnd="10dp"
+        app:cardBackgroundColor="#C8E3EF"
+        app:cardCornerRadius="14dp"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView41">
+
+        <EditText
+            android:id="@+id/nombre"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="#00FFFFFF"
+            android:inputType="textPersonName"
+            android:paddingStart="20dp"
+            android:textColor="#2C2C2C"
+            android:textSize="20sp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView11"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        app:cardBackgroundColor="#C8E3EF"
+        app:cardCornerRadius="14dp"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView44">
+
+        <EditText
+            android:id="@+id/apellidos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="#00FFFFFF"
+            android:inputType="textPersonName"
+            android:paddingStart="20dp"
+            android:textColor="#373737"
+            android:textSize="20sp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView12"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        app:cardBackgroundColor="#C8E3EF"
+        app:cardCornerRadius="14dp"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView45">
+
+        <EditText
+            android:id="@+id/nombreusuario"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="#00FFFFFF"
+            android:inputType="textPersonName"
+            android:paddingStart="20dp"
+            android:textSize="20sp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView13"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        app:cardBackgroundColor="#C8E3EF"
+        app:cardCornerRadius="14dp"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView46">
+
+        <ImageView
+            android:id="@+id/iconoemail"
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            app:srcCompat="@drawable/ic_envelope" />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="#00FFFFFF"
+            android:inputType="textEmailAddress"
+            android:paddingStart="60dp"
+            android:textSize="20sp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView14"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        app:cardBackgroundColor="#C8E3EF"
+        app:cardCornerRadius="14dp"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView47">
+
+        <ImageView
+            android:id="@+id/icononumber"
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            app:srcCompat="@drawable/ic_phone_call" />
+
+        <EditText
+            android:id="@+id/numero_telefono"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="60dp"
+            android:backgroundTint="#00FFFFFF"
+            android:inputType="textPersonName"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@+id/txtnumber" />
+
+    </androidx.cardview.widget.CardView>
 
     <Button
 
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:backgroundTint="@color/teal_200"
-        android:text="Actualizar"
+        android:layout_height="50dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="60dp"
+        android:background="@drawable/disenobotones"
         android:onClick="actualizar"
+        android:text="Actualizar"
         android:textColor="@android:color/white"
         android:textSize="18sp"
-        android:layout_marginTop="20dp"
-        />
-</LinearLayout>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView14" />
+</androidx.constraintlayout.widget.ConstraintLayout>

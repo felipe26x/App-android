@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,60 +7,136 @@
     android:padding="10dp"
     android:gravity="center"
     android:layout_height="match_parent"
-    tools:context=".usuarios.agregar">
+    tools:context=".Productos.agregar_p">
 
     <TextView
+        android:id="@+id/textView33"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="ingrese producto"
+        android:layout_marginTop="36dp"
+        android:gravity="center_horizontal"
+        android:text="Subir producto"
         android:textSize="28sp"
-        />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="10dp" />
+
+
+    <TextView
+        android:id="@+id/textView32"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:text="Nombres"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView33" />
 
     <EditText
         android:id="@+id/nombre_p"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:hint="nombres:"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="#4CAF50"
         android:inputType="textPersonName"
-        android:textSize="20sp" />
+        android:textColorHighlight="#03A9F4"
+        android:textColorLink="#03A9F4"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView32" />
+
+    <TextView
+        android:id="@+id/textView39"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:text="Descripcion"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nombre_p" />
 
     <EditText
         android:id="@+id/precio_p"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:hint="precio:"
-        android:inputType="textPersonName"
-        android:textSize="20sp" />
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="#4CAF50"
+        android:inputType="number"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView42" />
 
     <EditText
         android:id="@+id/info_p"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:hint="informacion de produccion:"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="#4CAF50"
         android:inputType="textEmailAddress"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView43" />
+
+    <TextView
+        android:id="@+id/textView42"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="28dp"
+        android:text="Precio"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descripcion_p" />
+
+    <TextView
+        android:id="@+id/textView43"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="38dp"
+        android:text="Informacion de produccion"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/precio_p" />
 
     <EditText
         android:id="@+id/descripcion_p"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:hint="descripcion:"
-        android:inputType="number"
-        android:textSize="20sp" />
-
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="#4CAF50"
+        android:inputType="number|text"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView39" />
 
     <Button
         android:id="@+id/btnInsert"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:backgroundTint="@color/teal_200"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="@color/purple_200"
         android:text="insertar"
         android:textColor="@android:color/white"
         android:textSize="18sp"
-        android:layout_marginTop="20dp"
-        />
-</LinearLayout>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.526"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/info_p" />
+</androidx.constraintlayout.widget.ConstraintLayout>

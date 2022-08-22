@@ -10,7 +10,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.example.splashscreenapp.ProductoAdapter;
 import com.example.splashscreenapp.Productos.Productos;
 import com.example.splashscreenapp.R;
 

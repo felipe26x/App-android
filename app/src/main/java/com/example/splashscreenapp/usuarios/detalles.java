@@ -34,11 +34,11 @@ public class detalles extends AppCompatActivity {
         position = intent.getExtras().getInt("position");
 
         tvid.setText("ID: " + MainActivity2.employeeArrayList.get(position).getId());
-        tvname.setText("Names: " + MainActivity2.employeeArrayList.get(position).getNombres());
-        tvlastnames.setText("lastnames: " + MainActivity2.employeeArrayList.get(position).getApellidos());
-        tvnameuser.setText("lastnames: " + MainActivity2.employeeArrayList.get(position).getNombreusuario());
-        tvemail.setText("Email: " + MainActivity2.employeeArrayList.get(position).getEmail());
-        tvnumber.setText("Number: " + MainActivity2.employeeArrayList.get(position).getNumero_telefono());
+        tvname.setText("" + MainActivity2.employeeArrayList.get(position).getNombres());
+        tvlastnames.setText("" + MainActivity2.employeeArrayList.get(position).getApellidos());
+        tvnameuser.setText(" " + MainActivity2.employeeArrayList.get(position).getNombreusuario());
+        tvemail.setText("" + MainActivity2.employeeArrayList.get(position).getEmail());
+        tvnumber.setText("" + MainActivity2.employeeArrayList.get(position).getNumero_telefono());
 
     }
 }

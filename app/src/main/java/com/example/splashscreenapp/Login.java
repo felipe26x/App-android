@@ -18,6 +18,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.splashscreenapp.usuarios.agregar;
 
 import java.util.Hashtable;
 import java.util.Map;
@@ -135,7 +136,7 @@ public class Login extends AppCompatActivity {
     }
 
     public void registrar(View view) {
-        Intent intent = new Intent(Login.this , Registro.class);
+        Intent intent = new Intent(Login.this , agregar.class);
         startActivity(intent);
 
     }

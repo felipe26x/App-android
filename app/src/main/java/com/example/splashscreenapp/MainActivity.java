@@ -92,7 +92,7 @@ public class  MainActivity extends AppCompatActivity implements RecyclerAdapter.
 
         initViews();
         initValues();
-        initListener();
+
 
 
 
@@ -108,20 +108,13 @@ public class  MainActivity extends AppCompatActivity implements RecyclerAdapter.
 
 
 
-        ver = findViewById(R.id.ver);
+
         drawerLayout = findViewById(R.id.DrawerLayout);
         navigationView = findViewById(R.id.NavigationView);
         toolbar=findViewById(R.id.app_Bar);
 
 
 
-        ver.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,descripcionproducto.class);
-                startActivity(intent);
-            }
-        });
 
 
         setSupportActionBar(toolbar);
@@ -159,17 +152,12 @@ public class  MainActivity extends AppCompatActivity implements RecyclerAdapter.
 
 
 
-                    case R.id.Ayuda:
-                        Intent intent4 = new Intent(MainActivity.this, Ayuda.class);
-                        startActivity(intent4);
-                        break;
 
 
 
 
 
 
-                    case R.id.CerrarCesion:
 
 
 
@@ -194,11 +182,11 @@ public class  MainActivity extends AppCompatActivity implements RecyclerAdapter.
 
         List items = new ArrayList();
 
-        items.add(new Videojuegos(R.drawable.s, "Frutas", 200));
-        items.add(new Videojuegos(R.drawable.platano, "Carnes", 12));
-        items.add(new Videojuegos(R.drawable.cafe, "los productos mas frescos y deliciosos", 32));
-        items.add(new Videojuegos(R.drawable.s, "100% del campo", 66));
-        items.add(new Videojuegos(R.drawable.zana, "", 10));
+        items.add(new Videojuegos(R.drawable.frutas, "Frutas", 200));
+        items.add(new Videojuegos(R.drawable.carnes, "Carnes", 12));
+        items.add(new Videojuegos(R.drawable.verduras, "verduras", 32));
+        items.add(new Videojuegos(R.drawable.granos1, "Granos", 66));
+
 
 
         LManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
@@ -276,28 +264,14 @@ public class  MainActivity extends AppCompatActivity implements RecyclerAdapter.
     }
 
 
-    public void ver(View view) {
-        Intent intent= new Intent(MainActivity.this,descripcionproducto.class);
-        startActivity(intent);
-    }
 
-    public void listar(View view) {
-        Intent intent= new Intent(MainActivity.this,MainActivity2.class);
-        startActivity(intent);
-    }
 
-    public void entrar(View view) {
-    }
 
-    public void productos(View view) {
-        Intent intent= new Intent(MainActivity.this,MainActivity3.class);
-        startActivity(intent);
-    }
 
 
     private void initViews(){
         rvLista = findViewById(R.id.rvLista);
-        svSearch = findViewById(R.id.svSearch);
+
 
     }
 
@@ -310,7 +284,6 @@ public class  MainActivity extends AppCompatActivity implements RecyclerAdapter.
 
     }
 
-    private void initListener() { svSearch.setOnQueryTextListener(this);}
 
 
 

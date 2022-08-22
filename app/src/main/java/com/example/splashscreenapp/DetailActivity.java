@@ -2,6 +2,8 @@ package com.example.splashscreenapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -48,5 +50,23 @@ public class DetailActivity extends AppCompatActivity {
     }
 
     public void volver(View view) {
+        Intent intent = new Intent(this,MainActivity.class);
+        startActivity(intent);
+    }
+
+
+    public void ubi(View view) {
+        Intent intent = new Intent(this,Location.class);
+        startActivity(intent);
+    }
+    public void contactar(View view) {
+        Intent i = new Intent(android.content.Intent.ACTION_DIAL,
+                Uri.parse("tel:+573168646125")); //
+        startActivity(i);
+    }
+
+    public void perfil(View view) {
+        Intent intent = new Intent(this,perfil1.class);
+        startActivity(intent);
     }
 }

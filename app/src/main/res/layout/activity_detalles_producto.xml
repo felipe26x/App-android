@@ -1,68 +1,219 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFCFC"
     android:orientation="vertical"
-    android:padding="10dp"
     tools:context=".Productos.detalles_p">
 
+    <TextView
+        android:id="@+id/textView38"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:background="@drawable/diseno_detalle_p_admin2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="44dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:background="#00FFFFFF"
+        android:onClick="volver"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_arrow_left" />
+
+
     <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:padding="5dp"
-        app:cardCornerRadius="5dp"
+        android:id="@+id/cardView9"
+        android:layout_width="60dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="60dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="14dp"
+        app:cardElevation="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        android:layout_height="match_parent">
-
-        <LinearLayout
+        <TextView
+            android:id="@+id/txtid"
             android:layout_width="match_parent"
-            android:orientation="vertical"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="ID:"
-                android:textSize="20sp"
-                android:id="@+id/txtid"
-                android:layout_marginBottom="10dp"
-                />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Nombre : "
-                android:textSize="20sp"
-                android:id="@+id/txtname"
-                android:layout_marginBottom="10dp"
-                />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Apellidos : "
-                android:textSize="20sp"
-                android:id="@+id/txtlastnames"
-                android:layout_marginBottom="10dp"
-                />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Correo :"
-                android:textSize="20sp"
-                android:id="@+id/txtemail"
-                android:layout_marginBottom="10dp"
-                />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="numero:"
-                android:textSize="20sp"
-                android:id="@+id/txtnumber"
-                android:layout_marginBottom="10dp"
-                />
-
-        </LinearLayout>
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingStart="10dp"
+            android:text="ID:"
+            android:textSize="20sp" />
     </androidx.cardview.widget.CardView>
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="110dp"
+        android:gravity="center"
+        android:text="Detalles del Producto"
+        android:textColor="#303030"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView6"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="10dp"
+        app:cardBackgroundColor="#252525"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView24">
+
+        <TextView
+            android:id="@+id/textView34"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="bottom|center_vertical"
+            android:paddingStart="20dp"
+            android:text="Nombres"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtnombre_p"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="50dp"
+            android:paddingStart="20dp"
+            android:textColor="#E4E2E2"
+            android:textSize="18dp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+
+        android:id="@+id/cardView8"
+        android:layout_width="160dp"
+        android:layout_height="180dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        app:cardBackgroundColor="#252525"
+        app:cardCornerRadius="14dp"
+        app:cardElevation="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView7">
+
+        <TextView
+            android:id="@+id/textView35"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="bottom|center_horizontal"
+            android:text="Precio"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginRight="20dp"
+            app:cardBackgroundColor="#F8FFFFFF"
+            app:cardCornerRadius="14dp"
+            app:cardElevation="0dp">
+
+            <TextView
+                android:id="@+id/txtprecio_p"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="#4CAF50"
+                android:textSize="24sp" />
+        </androidx.cardview.widget.CardView>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="200dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="-180dp"
+        android:layout_marginEnd="10dp"
+        app:cardBackgroundColor="#252525"
+        app:cardCornerRadius="14dp"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView8">
+
+        <TextView
+            android:id="@+id/textView37"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="bottom|center_horizontal"
+            android:text="Informacion"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtinfop_p"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="50dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textColor="#E4E2E2"
+            android:textSize="18sp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+
+        android:id="@+id/cardView7"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        app:cardBackgroundColor="#252525"
+        app:cardCornerRadius="14dp"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView6">
+
+        <TextView
+            android:id="@+id/textView36"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="bottom"
+            android:paddingStart="20dp"
+            android:text="Descripcion"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtdescription_p"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="50dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textColor="#E4E2E2"
+            android:textSize="18sp" />
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

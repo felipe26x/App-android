@@ -5,6 +5,18 @@
     android:id="@+id/app_Bar"
     android:layout_height="?attr/actionBarSize">
 
+    <ImageView
+        android:id="@+id/buscar"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginLeft="110dp"
+        android:onClick="Buscador"
+        android:src="@drawable/ic_baseline_search_24">
+
+    </ImageView>
+
+
+
 
 
 </androidx.appcompat.widget.Toolbar>

@@ -219,4 +219,9 @@ public class MainActivity2 extends AppCompatActivity {
     public void agregar(View view) {
         startActivity(new Intent(getApplicationContext(), agregar.class));
     }
+
+    public void volver(View view) {
+        Intent intent = new Intent(this,admin.class);
+        startActivity(intent);
+    }
 }

@@ -20,6 +20,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.splashscreenapp.Productos.Productos;
+import com.example.splashscreenapp.Productos.agregar_p;
 import com.example.splashscreenapp.Productos.detalles_p;
 import com.example.splashscreenapp.Productos.editar_p;
 import com.example.splashscreenapp.adaptador.AdapterP;
@@ -214,6 +215,11 @@ public class MainActivity3 extends AppCompatActivity {
 
 
     public void agregar(View view) {
-        startActivity(new Intent(getApplicationContext(), agregar.class));
+        startActivity(new Intent(getApplicationContext(), agregar_p.class));
+    }
+
+    public void volver(View view) {
+        Intent intent = new Intent(this,admin.class);
+        startActivity(intent);
     }
 }

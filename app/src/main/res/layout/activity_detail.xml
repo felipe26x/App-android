@@ -195,6 +195,7 @@
                 android:layout_marginTop="40dp"
                 android:layout_marginRight="220dp"
                 android:background="@drawable/disenobotones"
+                android:onClick="perfil"
                 android:text="mas..."
                 android:textColor="#FFFFFF" />
 
@@ -208,8 +209,31 @@
                 android:layout_marginRight="40dp"
                 android:layout_marginBottom="40dp"
                 android:background="@drawable/disenobotones"
+                android:onClick="contactar"
                 android:text="contactar"
                 android:textColor="#FFFFFF" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/ubicacion"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="40dp"
+                app:cardBackgroundColor="#DFF3E0"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="0dp">
+
+                <TextView
+                    android:id="@+id/textView48"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:onClick="ubi"
+                    android:text="Ver Ubicacion del producto"
+                    android:textColor="#2B2B2B"
+                    android:textSize="20sp" />
+            </androidx.cardview.widget.CardView>
 
             <TextView
                 android:id="@+id/Comentarios"
